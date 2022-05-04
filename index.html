@@ -21,49 +21,77 @@
         </div>
     </div>
     <div class="container hienthi">
-        
-    </div>
-    <div class="layoutintput">
-        <div class="nhaplieu">
-            <div class="row Datain">
-                <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 col-xl-5">
-                    <label for="">Nhập tên sản phẩm</label>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-7 col-lg-7 col-xl-7">
-                    <input type="text" id="nameSp">
-                </div>
-            </div>
-            <div class="row Datain">
-                <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 col-xl-5">
-                    <label for="">Nhập giá (k VND)</label>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-7 col-lg-7 col-xl-7">
-                    <input type="number" id="giaSp">
+        <div class="banner" id="showSp">
+            <div class="card" style="width: 15rem; margin-bottom: 10px;">
+                <img src="http://hoatuoibaohan.com/wp-content/uploads/2021/12/dat-hoa-tuoi-sinh-nhat-quan-go-vap.jpg" class="card-img-top" alt="...">
+                <input type="button" value="x" id="deleteSp">
+                <div class="card-body">
+                    <h5 class="card-title">Tên sản phẩm</h5>
+                    <p class="card-text">Số lượng</p>
+                    <p class="card-text">Giá sản phẩm</p>
+                    <input type="button" class="btn btn-primary" value="Thêm vào giỏ hàng">
                 </div>
             </div>
-            <div class="row Datain">
-                <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 col-xl-5">
-                    <label for="">Tình trạng</label>
+        </div>
+        <br>
+        <div class="layoutintput">
+            <div class="nhaplieu" id="keybaner">
+                <div class="row Datain">
+                    <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 col-xl-5">
+                        <label for="">Nhập tên sản phẩm</label>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-7 col-lg-7 col-xl-7">
+                        <input type="text" id="nameSp">
+                    </div>
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-7 col-lg-7 col-xl-7">
-                    <select type="select"  id="tinhTrang">
-                        <option>Còn hàng</option>
-                        <option>Hết hàng</option>
-                    </select>
+                <div class="row Datain">
+                    <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 col-xl-5">
+                        <label for="">Nhập giá (k VND)</label>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-7 col-lg-7 col-xl-7">
+                        <input type="number" id="giaSp">
+                    </div>
+                </div>
+                <div class="row Datain">
+                    <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 col-xl-5">
+                        <label for="">Số lượng</label>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-7 col-lg-7 col-xl-7">
+                        <input type="number" id="soLuong">
+                    </div>
+                </div>
+                <div class="row Datain">
+                    <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 col-xl-5">
+                        <label for="">Link hình ảnh sản phẩm</label>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-7 col-lg-7 col-xl-7">
+                        <input type="url" id="imagesSp">
+                    </div>
+                </div>
+                <div class="row Datain butonF">
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                        <input type="button" value="Nhập hàng" id="submitSp">
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <input type="button" value="Đóng" id="deleteNhap">
+                    </div>
                 </div>
             </div>
-            <div class="row Datain">
-                <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5 col-xl-5">
-                    <label for="">Link hình ảnh sản phẩm</label>
+        </div>
+        <br>
+        <input type="button" value="Thêm mới sản phẩm" id="xhForm">
+        <div class="layoutGio">
+            <input type="button" value="Đóng" id="offM">
+            <div id="gioSp">
+                <legend>SHOP HOA!</legend>
+                <img src="https://tramhoa.com/wp-content/uploads/2021/02/bo-hoa-tuoi.jpg" width="50px" height="50px">
+                <div class="daNhap">
+                    <p>Số lượng:</p><input type="number" id="slDn" max="1000" disabled>
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-7 col-lg-7 col-xl-7">
-                    <input type="url" id="imagesSp">
+                <div class="daNhap">
+                    <p>Tổng giá: </p><input type="number" id="slDn" max="1000" disabled>
                 </div>
-            </div>
-            <div class="row Datain">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <input type="button" value="Nhập hàng" id="submitSp">
-                </div>
+                <input type="button" value="Chỉnh sửa" id="editGio">
             </div>
         </div>
     </div>

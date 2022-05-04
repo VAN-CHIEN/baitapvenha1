@@ -3,6 +3,7 @@
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
+/* phần tiêu đề */
 a{
     color: inherit !important;
     text-decoration: none;
@@ -13,20 +14,15 @@ a{
 .thanhtd{
     border-bottom: 2px solid black;
 }
-.hienthi{
-    width: 100%;
-    height: 500px;
-    border-bottom: 2px solid black;
-}
+/* phần input */
 .layoutintput{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.layoutintput{
     width: 100%;
-    height: 400px;
+    height: auto;
 }
+
 .nhaplieu{
     width: 500px;
     height: auto;
@@ -34,11 +30,35 @@ a{
     margin: 0px;
     border-radius: 5px;
     box-shadow: 5px 5px 8px 3px #F5BBC5;
+    animation-name: bounceInt;
+    animation-duration: 1s;
+}
+@keyframes bounceInt {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    60% {
+        transform:scale(1.2) ;
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 .Datain{
     margin-left: 0px !important;
     margin-right: 0px !important;
     margin-top: 2%;
+}
+#submitSp{
+    float: right;
+}
+#deleteNhap{
+    float: left;
+    padding: 5px;
+    background-color: #F5BBC5;
+    margin-left: 2%;
 }
 .Datain label {
     margin-left: 10%;
@@ -46,7 +66,7 @@ a{
 .Datain div {
     padding: 0px !important;
 }
-.Datain input,select{
+.Datain input{
     border-radius: 5px;
     outline: none;
     border: none;
@@ -60,4 +80,77 @@ a{
     margin-bottom: 2%;
     padding: 5px;
     background-color: #F5BBC5;
+}
+/* phần hiển thị ra web */
+.hienthi{
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid black;
+}
+.banner{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-content: space-around;
+}
+.card{
+    position: relative;
+}
+#deleteSp{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    color: red;
+    border: none;
+    right: 0px;
+}
+#xhForm{
+    padding: 7px;
+    border-radius: 5px;
+    background-color: #0069D9;
+    color: white;
+    border: none;
+    margin-left: 41%;
+    margin-bottom: 10px;
+}
+#xhForm:active{
+    padding: 10px;
+    background-color: #025ec0;
+}
+#keybaner{
+    display: none;
+}
+/* modal giỏ hàng */
+.layoutGio{
+    width: 28%;
+    padding: 20px;
+    background-color: rgb(17, 17, 17,0.3);
+    z-index: 0;
+    border-radius: 5px;
+}
+#gioSp{
+    width: 260px;
+    height: 250px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(17, 17, 17,0.5);
+    z-index: 10;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items:center;
+}
+.daNhap{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+#slDn{
+    width: 50px;
+    height: 20px;
 }
