@@ -11,7 +11,8 @@ var getdataSp =function(){
     document.getElementById('imagesSp').value= "";
 }
 var listSp = [];
-var spId = "";
+
+var thongkeSp =document.getElementById('showSp');
 var inputSp = function() {
     var flSp = document.querySelectorAll('.nhaplieu input');
     let st = new flower(flSp[0].value,flSp[1].value,flSp[2].value,flSp[3].value);
@@ -21,7 +22,7 @@ var inputSp = function() {
 }
 var laydulieuSp = function() {
     var row ="";
-    for (var index =0; index<listSp.length; index ++) {
+    for (var index= 0; index<listSp.length; index ++) {
         row +=`
         <div class="card" style="width: 18rem;margin-bottom: 10px;">
                 <img src=${listSp[index].flowerImages} class="card-img-top" alt="...">
@@ -34,10 +35,17 @@ var laydulieuSp = function() {
                 </div>
             </div>
         `;
+        localStorage.setItem(index,row);
+        var layra =localStorage.getItem(index);
     }
     var khunganh =document.getElementById('showSp');
-    khunganh.innerHTML=row;
+    khunganh.innerHTML=layra;
+    var spId = 1;
+    spId++;
+    var layngoai = localStorage.getItem("spId");
+    console.log(spId);
 }
+
 // Xử lý modal nhập sản phẩm
 var modal = document.getElementById('keybaner');
 var inputXh =document.getElementById('xhForm');
@@ -49,6 +57,10 @@ inputXh.onclick = function () {
 DongForm.onclick =function() {
     modal.style.display ="none";
     inputXh.style.display ="block";
+}
+// Xử lý giỏ hàng
+chonGio =function () {
+    document.getElementById('top1').style.display="block";
 }
 var nutxoa = document.getElementById('deleteSp');
 var nutaddSp =document.getElementById('submitSp');
