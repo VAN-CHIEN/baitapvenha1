@@ -101,7 +101,7 @@ a{
 .card{
     position: relative;
 }
-#deleteSp{
+.deleteSp{
     position: absolute;
     width: 30px;
     height: 30px;
@@ -143,11 +143,17 @@ a{
     opacity: 1;
 }
 .daNhap{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+}
+.daNhap span input{
+    height: 30px;
+    width: 50px;
+    max-lines: 10;
 }
 #giogio{
     width: 95%;
@@ -156,7 +162,7 @@ a{
     border: 1px dotted black;
     margin-top: 10px;
 }
-#editGio{
+.editGio{
     border: none;
     padding: 4px;
     background-color: #025ec0;
@@ -175,4 +181,12 @@ a{
 }
 #offM:active{
     padding: 5px;
+}
+.hoantat{
+    padding: 3px;
+    border-radius: 5px;
+    background-color: #b528b9;
+    color: white;
+    border: none;
+    margin-top: 10px;
 }
