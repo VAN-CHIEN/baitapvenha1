@@ -58,13 +58,16 @@ function xhinfoSp() {
     // }
         var btnGio =document.querySelectorAll('.clickAdd');
         var dulieuSp =JSON.parse(localStorage.getItem("infoSp"));
+        
         var hot = "";
         for (let y =0; y<btnGio.length;y++){
             btnGio[y].addEventListener("click",function() {
                 for (z=0;z<dulieuSp.length;z++){
                     if (y ==z) {
+                        console.log(document.querySelectorAll('.Idg'));
                         hot+=`
                             <br>
+                            <span class="Idg">${y}</span>
                             <img src="${dulieuSp[z].anh}" width="50px" height="50px">
                             <span>Tên:${dulieuSp[z].nameSP}</span>
                             <div class="daNhap">
